@@ -16,6 +16,7 @@ interface PlanetData {
 
 const PLANET_SIZE = 2;
 
+// Planet definitions with texture, distance, speed, axial tilt, and optional rings
 const planets: PlanetData[] = [
   { name: "Mercury", texture: "https://upload.wikimedia.org/wikipedia/commons/2/27/Solarsystemscope_texture_8k_mercury.jpg", distance: 8, speed: 1.59, axialTilt: 0.01 },
   { name: "Venus", texture: "https://upload.wikimedia.org/wikipedia/commons/1/1c/Solarsystemscope_texture_8k_venus_surface.jpg", distance: 12, speed: 1.18, axialTilt: 177.4 },
@@ -31,11 +32,13 @@ const planets: PlanetData[] = [
   { name: "Neptune", texture: "https://upload.wikimedia.org/wikipedia/commons/1/1e/Solarsystemscope_texture_2k_neptune.jpg", distance: 52, speed: 0.18, axialTilt: 28.3 },
 ];
 
+// Component for rendering a planet with orbit and optional rings
 function Planet({ planet }: { planet: PlanetData }) {
   const meshRef = useRef<THREE.Mesh>(null!);
   const texture = useLoader(THREE.TextureLoader, planet.texture);
   const orbitRef = useRef(0);
 
+  // Generate orbit path geometry
   const orbitGeometry = useMemo(() => {
     const geometry = new THREE.BufferGeometry();
     const points = [];
@@ -48,12 +51,14 @@ function Planet({ planet }: { planet: PlanetData }) {
     return geometry;
   }, [planet.distance]);
 
+  // Assign unique orbit color for each planet
   const orbitColor = useMemo(() => {
     const colors = ["#00ffff", "#ff00ff", "#ffff00", "#00ff00", "#ff6600", "#ff0000", "#66ccff", "#0066ff"];
     const index = planets.findIndex(p => p.name === planet.name);
     return colors[index % colors.length];
   }, [planet.name]);
 
+  // Update planet position and rotation each frame
   useFrame((_, delta) => {
     orbitRef.current += delta * planet.speed;
     const x = Math.sin(orbitRef.current) * planet.distance * (1 + 0.05 * Math.sin(orbitRef.current * 2));
@@ -88,10 +93,12 @@ function Planet({ planet }: { planet: PlanetData }) {
   );
 }
 
+// Component for the Sun
 function Sun() {
   const meshRef = useRef<THREE.Mesh>(null!);
   const sunTexture = "https://upload.wikimedia.org/wikipedia/commons/a/a4/Solarsystemscope_texture_8k_sun.jpg";
 
+  // Rotate sun slowly
   useFrame(() => {
     meshRef.current.rotation.y += 0.002;
   });
@@ -104,12 +111,14 @@ function Sun() {
   );
 }
 
+// Component for galaxy particles in the background
 function GalaxyParticles() {
   const pointsRef = useRef<THREE.Points>(null!);
   const geometry = useRef<THREE.BufferGeometry>(new THREE.BufferGeometry());
   const count = 6000;
   const positions = new Float32Array(count * 3);
 
+  // Randomly generate particle positions
   for (let i = 0; i < count; i++) {
     positions[i * 3] = (Math.random() - 0.5) * 1200;
     positions[i * 3 + 1] = (Math.random() - 0.5) * 800;
@@ -118,6 +127,7 @@ function GalaxyParticles() {
 
   geometry.current.setAttribute("position", new THREE.BufferAttribute(positions, 3));
 
+  // Rotate particles slowly
   useFrame(() => {
     pointsRef.current.rotation.y += 0.001;
   });
@@ -129,10 +139,12 @@ function GalaxyParticles() {
   );
 }
 
-// ستاره‌های دنبال‌دار (Shooting Stars)
+// Component for shooting stars
 function ShootingStars() {
   const groupRef = useRef<THREE.Group>(null!);
   const count = 20;
+
+  // Generate random shooting star positions and speeds
   const stars = useMemo(() => {
     const arr: { position: THREE.Vector3; speed: number }[] = [];
     for (let i = 0; i < count; i++) {
@@ -148,6 +160,7 @@ function ShootingStars() {
     return arr;
   }, []);
 
+  // Update shooting stars positions each frame
   useFrame(() => {
     groupRef.current.children.forEach((star, i) => {
       const s = stars[i];
@@ -170,6 +183,7 @@ function ShootingStars() {
   );
 }
 
+// Main scene component
 export default function Home() {
   return (
     <main className="w-full h-screen bg-black">
