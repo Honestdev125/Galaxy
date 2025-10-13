@@ -1,63 +1,82 @@
-<div>
-  <h1>Click on the GitHub icon below to view the project online.</h1>
+<div align="center">
+  <h1>🌌 Galaxy Project</h1>
+  <p>Explore the universe — interactive galaxies, stars, and constellations ✨</p>
   <a href="https://hamiparsa.github.io/Galaxy/">
-    <img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"/>
+    <img src="https://img.shields.io/badge/View_Live_Project-1DB954?style=for-the-badge&logo=github&logoColor=white"/>
   </a>
 </div>
 
-Galaxy Project 🌌✨
+---
 
-This is a Galaxy-themed web application featuring interactive visualizations and responsive design.
+## 📝 About the Project
 
-Features:
-<ul>
-  <li>
-    Explore different galaxies with interactive animations
-  </li>
-  <li>
-    Detailed information about stars, planets, and constellations
-  </li>
-  <li>
-    Search and filter celestial objects
-  </li>
-  <li>
-    Dark mode for immersive night-sky experience
-  </li>
-  <li>
-    Fully responsive design for mobile, tablet, and desktop screens
-  </li>
-</ul>
+**Galaxy Project** is a modern, interactive web application that lets users explore galaxies, stars, planets, and constellations.  
+With immersive animations and a smooth responsive design, this project demonstrates advanced front-end skills using **Next.js**, **React**, **TypeScript**, and **Tailwind CSS**.
 
-Technologies Used:
+---
+
+## 🌠 Features
 
 <ul>
-  <li>
-    React for building UI components 
-    <img width='20px' src='https://skillicons.dev/icons?i=react'>
-  </li>
-  <li>
-    Next.js for server-side rendering and routing
-    <img width='20px' src='https://skillicons.dev/icons?i=next'>
-  </li>
-  <li>
-    TypeScript for type safety and better code quality
-    <img width='20px' src='https://skillicons.dev/icons?i=typescript'>
-  </li>
-  <li>
-    Tailwind CSS for fast and responsive styling
-    <img width='20px' src='https://skillicons.dev/icons?i=tailwindcss'>
-  </li>
+  <li>✨ <b>Interactive Galaxy Explorer</b> — Explore different galaxies with smooth animations</li>
+  <li>🌟 <b>Celestial Info</b> — Detailed info on stars, planets, and constellations</li>
+  <li>🔍 <b>Search & Filter</b> — Quickly find celestial objects</li>
+  <li>🌙 <b>Dark Mode</b> — Immersive night-sky experience</li>
+  <li>💻 <b>Fully Responsive</b> — Works seamlessly on mobile, tablet, and desktop</li>
 </ul>
 
-Description:
+---
 
-Galaxy Project is a modern web app showcasing interactive galaxy visualizations. Users can explore galaxies, view celestial objects, and enjoy a smooth, responsive experience.   
+## 🧰 Tech Stack
 
-Perfect for practicing React, Next.js, TypeScript, Tailwind CSS, and building interactive UI projects.
+| Technology | Purpose |
+|------------|---------|
+| ⚛️ **React** | Building interactive UI components |
+| 🧭 **Next.js** | Routing and server-side rendering |
+| 🟦 **TypeScript** | Type safety and code quality |
+| 🎨 **Tailwind CSS** | Modern, responsive design |
 
-<hr/>
+---
 
-<h1 align="center">Project Images : 🖼️</h1>
+## 💡 Description
+
+This project provides a fully interactive galaxy visualization experience. Users can:
+
+- Explore multiple galaxies with animated transitions  
+- Access detailed information about stars, planets, and constellations  
+- Search and filter celestial objects easily  
+- Enjoy a responsive and immersive UI across all devices  
+
+Perfect for developers practicing **React**, **Next.js**, **TypeScript**, and **Tailwind CSS** while building interactive UI projects.
+
+---
+
+## 🖼️ Project Preview
+
+<h3 align="center">✨ Screenshots ✨</h3>
+
 <div align="center">
   <img src="/pic1.png" width="700px" />
+</div>
+
+---
+
+## 🚀 Future Improvements
+
+- 🌌 Add more galaxies and celestial object data  
+- 🛠️ Implement advanced animations with Framer Motion  
+- 🌈 Add theme toggle with cosmic backgrounds  
+- 📱 Enhance mobile interactions and responsiveness  
+
+---
+
+## 👨‍💻 Author
+
+**Developed by:** [Hami Parsa](https://github.com/hamiparsa)  
+💬 Front-End Developer | Passionate about space, motion, and modern UI  
+
+---
+
+<div align="center">
+  <img src="https://skillicons.dev/icons?i=react,next,typescript,tailwind" />
 </div>
