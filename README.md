@@ -1,7 +1,7 @@
 <div align="center">
   <h1>🌌 Galaxy Project</h1>
   <p>Explore the universe — interactive galaxies, stars, and constellations ✨</p>
-  <a href="https://hamiparsa.github.io/Galaxy/">
+  <a href="https://honestdev125.github.io/Galaxy/">
     <img src="https://img.shields.io/badge/View_Live_Project-1DB954?style=for-the-badge&logo=github&logoColor=white"/>
   </a>
 </div>
@@ -72,7 +72,7 @@ Perfect for developers practicing **React**, **Next.js**, **TypeScript**, and **
 
 ## 👨‍💻 Author
 
-**Developed by:** [Hami Parsa](https://github.com/hamiparsa)  
+**Developed by:** [Niku Namada](https://github.com/honestdev125)  
 💬 Front-End Developer | Passionate about space, motion, and modern UI  
 
 ---
